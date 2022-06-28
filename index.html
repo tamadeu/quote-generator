@@ -2,16 +2,19 @@
 <head>
 <title>Quote Generator</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="script.js"></script>
+
 </head>
-<body>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <body onload="startTime(); startDate()">
+  <body onload="startTime(); startDate(); genQuote()">
     <div class="container">
       <div id="date"></div>
       <div id="display"></div>
       <div id="content">
-        <p id="quote">"the people who are crazy enough to think they can change the world are the ones who do." <br/>- Steve Jobs</p>
+        <p id="quote"></p>
+        <p id="author"></p>
       </div>
     </div>
     <div id="b-nav">
