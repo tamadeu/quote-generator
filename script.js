@@ -31,17 +31,6 @@ function checkTime(i) {
   return i;
 }
 
-function genQuote() {
-  var randNum = Math.floor(Math.random() * 8) + 1;
-  document.getElementById('quote').innerHTML = quotes[randNum];
-  var tweetQuote = quotes[randNum].split(' ').join('%20');
-  tweetQuote = tweetQuote.split('<br>').join('');
-  tweetQuote = "https://twitter.com/intent/tweet?text=" + tweetQuote.split('"').join('')
-  $('.twitter-share-button').attr('href', tweetQuote);
-}
-
-
-
 //date
 function startDate() {
   var d = new Date();
@@ -59,6 +48,7 @@ const settings = {
     "X-RapidAPI-Host": "quotes15.p.rapidapi.com"
   }
 };
+
 function genQuote() {
   $.ajax(settings).done(function (response) {
 
